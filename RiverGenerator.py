@@ -99,7 +99,7 @@ class River:
                 if self.path[i][1]<1: # then we cant have values lesser than that so we will have only two possible directions
                     possibleDirections.append([i+1,self.path[i][1]])
                     possibleDirections.append([i+1,self.path[i][1] + 1])
-                elif self.path[i][1]>=len(self.map[i])-1: # then we cant have values greater than that so we will have only two possible directions
+                elif self.path[i][1]>=len(self.map)-1: # then we cant have values greater than that so we will have only two possible directions
                     possibleDirections.append([i+1,self.path[i][1]])
                     possibleDirections.append([i+1,self.path[i][1] - 1])
                 else: # else we can have all three possible directions
