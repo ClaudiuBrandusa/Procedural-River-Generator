@@ -25,9 +25,10 @@ class World:
             except ValueError:
                 print("integers only!")
     def __str__(self):
-        return "{} {}".format(self.x,self.y)
+        # works with python 3.6 version and other newer versions else try: "{} {}".format(self.x,self.y)
+        return f"{self.x} {self.y}"
     def __repr__(self):
-        return "{} {}".format(self.x,self.y)
+        return f"{self.x} {self.y}"
     # generating the matrix
     def Generate(self):
         for i in range(self.y):
@@ -50,8 +51,14 @@ class World:
             self.Generate()
         return self.matrix
     def ApplyPath(self,path): # this function just iterates the path and puts 1's where the path goes
+        # we are not using this method since 1.1 update
+        '''
         for i in range(len(path)):
             self.matrix[path[i][1]][path[i][0]]=1
+        '''
+        for i in path:
+            self.matrix[i[1]][i[0]]=1
+
 
 #setting up the River class
 
