@@ -77,7 +77,7 @@ class River:
             self.SetStartPoint()
         return self.start
     def GeneratePath(self):
-        if self.direction == 1 : # up
+        if self.direction == 1 :
             print('up')
             for i in range(len(self.map)-1): # it will iterate until the end of the matrix
                 possibleDirections = []
@@ -92,7 +92,7 @@ class River:
                     possibleDirections.append([self.path[i][0],i+1])
                     possibleDirections.append([self.path[i][0] + 1,i+1])
                 self.path.append(random.choice(possibleDirections))
-        else: # left
+        else:
             print("left")
             for i in range(len(self.map[0])-1): # it will iterate until the end of the matrix
                 possibleDirections = []
