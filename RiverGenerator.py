@@ -25,7 +25,6 @@ class World:
             except ValueError:
                 print("integers only!")
     def __str__(self):
-        # [fix_0] works with python 3.6 version and other newer versions else try: "{} {}".format(self.x,self.y)
         return f"{self.x} {self.y}"
     def __repr__(self):
         return f"{self.x} {self.y}"
@@ -51,14 +50,8 @@ class World:
             self.Generate()
         return self.matrix
     def ApplyPath(self,path): # this function just iterates the path and puts 1's where the path goes
-        # [fix_1] we are not using this method since 1.1 update
-        '''
-        for i in range(len(path)):
-            self.matrix[path[i][1]][path[i][0]]=1
-        '''
         for i in path:
             self.matrix[i[1]][i[0]]=1
-
 
 #setting up the River class
 
@@ -98,8 +91,6 @@ class River:
                     possibleDirections.append([self.path[i][0] - 1,i+1])
                     possibleDirections.append([self.path[i][0],i+1])
                     possibleDirections.append([self.path[i][0] + 1,i+1])
-                # [fix_2] since 1.1 update
-                #self.path.append(possibleDirections[random.randint(0,len(possibleDirections)-1)])
                 self.path.append(random.choice(possibleDirections))
         else: # left
             print("left")
@@ -115,8 +106,6 @@ class River:
                     possibleDirections.append([i + 1, self.path[i][1] - 1])
                     possibleDirections.append([i + 1, self.path[i][1]])
                     possibleDirections.append([i + 1, self.path[i][1] + 1])
-                # [fix_2] since 1.1 update
-                #self.path.append(possibleDirections[random.randint(0,len(possibleDirections)-1)])
                 self.path.append(random.choice(possibleDirections))
         self.hasGeneratedPath = True
     def GetPath(self):
