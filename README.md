@@ -10,8 +10,8 @@ Changelog :
 
 1.0 - Basic program
 
-1.1 - Some fixes :
-[fix_0] - Changed the way we return the matrix's value, see [fix_0] in the code for more details
-[fix_1] - We are iterating now the path list with a loop like a for each function, see [fix_1] in the code for more details
-[fix_2] - We are using the random.choice from the random module, see [fix_2] in the code for more details
+1.1 - Some fixes :<br />
+[fix_0] - Changed the way we return the matrix's value, see [fix_0] in the code for more details.<br />
+[fix_1] - We are iterating now the path list with a loop like a for each function, see [fix_1] in the code for more details.<br />
+[fix_2] - We are using the random.choice from the random module, see [fix_2] in the code for more details.<br />
 Those fixes have been added with the help of https://github.com/larswijn
